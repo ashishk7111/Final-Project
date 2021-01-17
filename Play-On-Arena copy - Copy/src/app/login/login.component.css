@@ -1,0 +1,77 @@
+body, html{
+  height:100%;
+  background-image: url("https://cdn.pixabay.com/photo/2017/05/31/10/19/rio-2359870_1280.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:initial;
+  background-position-x: center;
+
+}
+
+.form_bg {
+    background-color:black;
+    color:white;
+    opacity:0.8;
+    padding:20px;
+    border-radius:10px;
+    position:static;
+    border:1px solid #fff;
+	margin: auto;
+	border-bottom: 1px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+	height: 550px;
+    text-align:center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+	
+}
+.align-center {
+    text-align:center;
+}
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 50px;
+    text-align:initial;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+
+    color: #4267B2;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+   
+    color: 	#1DA1F2;
+  }
+ 
+  
+  .fa-instagram {
+    
+    color:#8a3ab9;
+  }
+  .fa-whatsapp {
+  
+    color:#075e54;
+  }
+ 
+  
