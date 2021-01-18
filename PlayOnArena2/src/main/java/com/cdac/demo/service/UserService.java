@@ -9,5 +9,7 @@ public interface UserService {
 	public User saveUser(User user);
 	
 	public User findByEmail(String email);
+	
+	public User fetchUserByEmailAndPassword(String email,String password);
 
 }

@@ -21,6 +21,11 @@ public class UserServiceImple implements UserService {
 		return userRepository.save(user);		
 	}
 
+	@Override
+    public User fetchUserByEmailAndPassword(String email,String password) { 
+		
+		return userRepository.findUserByEmailAndPassword(email,password);
+	}
 	
 
 	
