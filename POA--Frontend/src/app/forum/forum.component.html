@@ -1,0 +1,47 @@
+<p>forum works!</p>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">welcome to our Forum</h1>
+        <p class="lead">A simple way to communicate with Everyone</p>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+    <div class="row justify-content-md-center">
+        <div class="col-8 align-self-center">
+            <input type="text" name="commentText" class="form-control" [(ngModel)]="commentText"
+                (keyup.enter)="onAddcommentText()" />
+        </div>
+        <div class="col-2">
+            <button class="btn btn-sm btn-primary btn-block" (click)="onAddcommentText()">Comment</button>
+
+        </div>
+        <div class="col-2">
+            <button class="btn btn-sm btn-primary btn-block" (click)="onClearcommentText()">Clear</button>
+        </div>
+    </div>
+
+    <hr>
+
+
+    <div class="row">
+        <div class="col">
+            <div *ngIf="!iscommentListEmpty">
+                <p>Leave all your worries here!</p>
+            </div>
+            <div class="list-group" *ngIf="!iscommentListEmpty">
+                <a href="#" class="list-group-item list-group-item-action" *ngFor="let comment of commentList">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1" [ngClass]="comment.isCompleted ? 'strike':''">{{comment.text}}</h5>
+                        <button class="btn btn-sm btn-primary"
+                            (click)="onCompletingTask(comment.commentId)">{{comment.buttonText}}</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>

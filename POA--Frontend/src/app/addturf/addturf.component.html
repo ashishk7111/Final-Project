@@ -1,0 +1,399 @@
+
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark black "  [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand font-weight-bold " href="#">Play On Arena</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="home" class="nav-link waves-light" mdbWavesEffect>Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about-us" class="nav-link waves-light" mdbWavesEffect>About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href ="contact-us" class="nav-link waves-light" mdbWavesEffect>Contact Us</a>
+        </li>
+        <li class="nav-item">
+            <a href ="services" class="nav-link waves-light" mdbWavesEffect>Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a href ="membership" class="nav-link waves-light" mdbWavesEffect>Membership</a>
+          </li>
+        <!-- Dropdown -->
+   
+  </ul>
+
+        <!-- Log out model -->
+
+        <ul class="navbar-nav ml-auto nav-flex-icons ">
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="twitter"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="google-plus"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <div class="btn-group" mdbDropdown>
+                  <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-primary ">
+                    <a class="dropdown-item" (click)="onSubmit()">Log Out</a>
+                  
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- Logout model-->
+     
+    </links>
+  
+  </mdb-navbar>
+  
+  <!--/.Navbar-->
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5 ">
+                    <div class="row"> 
+                        <img src="https://images-platform.99static.com//QPpY0ziz0_g8stmL2n4wvIDE0HE=/0x0:1500x1500/fit-in/500x500/99designs-contests-attachments/79/79888/attachment_79888445" class="logo">
+                   </div>
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> 
+                        <img src="" class="image"> 
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-lg-6">
+                <div class="card2 card border-0 px-4 py-5">
+                    <form (ngSubmit)= " onSubmit1()">
+                      <h3 class="mb-0 text-lg font-weight-bold text-center">Add Turf </h3><br><br>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">TurfName</h6>
+                        </label> 
+                        <input type="text" #turfName="ngModel" [(ngModel)]="turf.turfName" [ngModelOptions]="{standalone: true}" class="form-control"  id="turfName" placeholder="TurfName"  minlength="2">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">TurfType</h6>
+                        </label> 
+                      <input type="text" #turfType="ngModel" [(ngModel)]="turf.turfType" [ngModelOptions]="{standalone: true}"  class="form-control"  id="turfType" placeholder="TurfType">
+
+                   
+
+                     </div>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">City</h6>
+                        </label> 
+                
+                      <input type="text" #turfAdd="ngModel" [(ngModel)]="turf.turfAdd" [ngModelOptions]="{standalone: true}" class="form-control"  id="turfAdd" placeholder="TurfAddress"  >
+
+                    
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">Full Address</h6>
+                        </label> 
+                      <input type="address" [(ngModel)]="turf.turfFullAdd" [ngModelOptions]="{standalone: true}"  class="form-control"  id="fullAdd" placeholder="Full Address">
+
+                    
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">Manager Name</h6>
+                        </label> 
+                      <input type="text" #managerName="ngModel" [(ngModel)]="turf.managerName" [ngModelOptions]="{standalone: true}" class="form-control"  id="managerName" placeholder="Name">
+
+                    
+
+                    </div>
+                   
+                    
+                   <div class="row mb-3 px-3 align-items-center ">
+                    <button type="submit" class="btn btn-blue align red" >ADD</button> 
+                  </div>
+                </form>
+                
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="bg-blue py-4">
+            <div class="row px-3">
+                 <small class="ml-4 ml-sm-5 mb-2 text-md-left">Copyright &copy; 2021. All rights reserved.</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+  <!-- Footer -->
+  <footer class="page-footer font-small unique-color-dark">
+  
+    <div style="background-color:black">
+      <div class="container">
+  
+        <!-- Grid row-->
+        <div class="row py-4 d-flex align-items-center">
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+            <h6 class="mb-0">Get connected with us on social networks!</h6>
+          </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-6 col-lg-7 text-center text-md-right">
+  
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <mdb-icon fab icon="facebook" class="white-text mr-4"></mdb-icon>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <mdb-icon fab icon="twitter" class="white-text mr-4"></mdb-icon>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic">
+              <mdb-icon fab fab icon="google-plus" class="white-text mr-4"></mdb-icon>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <mdb-icon fab icon="linkedin" class="white-text mr-4"></mdb-icon>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <mdb-icon fab icon="instagram" class="white-text mr-4"></mdb-icon>
+            </a>
+  
+          </div>
+          <!-- Grid column -->
+  
+        </div>
+        <!-- Grid row-->
+  
+      </div>
+    </div>
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+  
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Play On Arena</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>An online playground booking system works all the time. 
+            We gives freedom to potential visitors to book a ground anytime they want.
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Services</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!">Membership</a>
+          </p>
+          <p>
+            <a href="#!">Kit</a>
+          </p>
+          <p>
+            <a href="#!">Food</a>
+          </p>
+          <p>
+            <a href="#!">Training</a>
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!">Your Account</a>
+          </p>
+          <p>
+            <a href="#!">View Time Slot</a>
+          </p>
+          <p>
+            <a href="#!">Ground Rates</a>
+          </p>
+          <p>
+            <a href="#!">Help</a>
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <mdb-icon fas icon="home" class="mr-3"></mdb-icon> CDAC-JUHU, MUMBAI
+          </p>
+          <p>
+            <mdb-icon fas icon="envelope" class="mr-3"></mdb-icon> playonarena@Gmail.com
+          </p>
+          <p>
+            <mdb-icon fas icon="phone" class="mr-3"></mdb-icon> + 91 8899 9999 89
+          </p>
+          <p>
+            <mdb-icon fas icon="print" class="mr-3"></mdb-icon> + 8989898
+          </p>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+  
+    <!--Images -->
+    <div class="container">
+  
+      <!--Grid row-->
+      <div class="row">
+  
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-12 mb-4">
+  
+          <!--Image-->
+          <div class="view overlay z-depth-1-half">
+            <img src="https://cdn.pixabay.com/photo/2017/08/24/21/41/tartan-track-2678544_1280.jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask rgba-white-light" mdbWavesEffect></div>
+            </a>
+          </div>
+  
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4">
+  
+          <!--Image-->
+          <div class="view overlay z-depth-1-half">
+            <img src="https://cdn.pixabay.com/photo/2015/05/15/14/49/basketball-768713_1280.jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask rgba-white-light" mdbWavesEffect></div>
+            </a>
+          </div>
+  
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4">
+  
+          <!--Image-->
+          <div class="view overlay z-depth-1-half">
+            <img src="https://cdn.pixabay.com/photo/2015/04/15/21/06/cricket-724614_1280.jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask rgba-white-light" mdbWavesEffect></div>
+            </a>
+          </div>
+  
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-12 mb-4">
+  
+          <!--Image-->
+          <div class="view overlay z-depth-1-half">
+            <img src="https://cdn.pixabay.com/photo/2016/07/23/20/11/field-hockey-1537470_1280.jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask rgba-white-light" mdbWavesEffect></div>
+            </a>
+          </div>
+  
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4">
+  
+          <!--Image-->
+          <div class="view overlay z-depth-1-half">
+            <img src="https://cdn.pixabay.com/photo/2016/11/29/13/08/skateboard-1869727_1280.jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask rgba-white-light" mdbWavesEffect></div>
+            </a>
+          </div>
+  
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-2 col-md-6 mb-4">
+  
+          <!--Image-->
+          <div class="view overlay z-depth-1-half">
+            <img src="https://cdn.pixabay.com/photo/2016/05/31/23/21/badminton-1428046_1280.jpg" class="img-fluid" alt="">
+            <a>
+              <div class="mask rgba-white-light" mdbWavesEffect></div>
+            </a>
+          </div>
+  
+        </div>
+        <!--Grid column-->
+  
+      </div>
+      <!--Grid row-->
+  
+    </div>
+    <!--Images-->
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
+      <a href=""> PlayOnArena.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+  
+    
+  

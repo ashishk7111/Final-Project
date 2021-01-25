@@ -1,0 +1,131 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark black "  [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand font-weight-bold " href="#">Play On Arena</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="home" class="nav-link waves-light" mdbWavesEffect>Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about-us" class="nav-link waves-light" mdbWavesEffect>About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href ="contact-us" class="nav-link waves-light" mdbWavesEffect>Contact Us</a>
+        </li>
+        <li class="nav-item">
+            <a href ="services" class="nav-link waves-light" mdbWavesEffect>Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a href ="membership" class="nav-link waves-light" mdbWavesEffect>Membership</a>
+          </li>
+        <!-- Dropdown -->
+   
+  </ul>
+
+        <!-- Log out model -->
+
+        <ul class="navbar-nav ml-auto nav-flex-icons ">
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="twitter"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="google-plus"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <div class="btn-group" mdbDropdown>
+                  <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-primary ">
+                    <a class="dropdown-item" (click)="onSubmit()">Log Out</a>
+                  
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- Logout model-->
+     
+    </links>
+  
+  </mdb-navbar>
+  
+  <!--/.Navbar-->
+
+  <!--Container-->
+  
+
+  <div class="container2 text-center ">
+  <select class="custom-select text-md-right align-items-center " [(ngModel)]="turfAdd"
+  
+       style="width:200px; margin-right: 5px;margin-top: 10px;  "> 
+       <option selected>Select..</option>
+
+       <option *ngFor="let turf of turfs" 
+       value="{{turf.turfAdd}}">{{turf.turfAdd}}</option>
+
+ 
+             
+         
+ </select> 
+
+
+ <select class="custom-select text-center align-items-center" [(ngModel)]="turfType"
+ 
+   style="width:200px; margin-left: 5px;margin-top: 10px;"> 
+      
+      <option selected>Select..</option>
+
+      <option *ngFor="let turf of turfs" 
+      value="{{turf.turfType}}">{{turf.turfType}}</option>
+</select> 
+
+  <button type="button " mdbBtn color="red" mdbWavesEffect (click)="getdata()"
+  >Search</button>
+
+  </div>
+
+ 
+  <h2 style="margin-left: 650px; margin-top: 25px;  align-items: center">Turf List</h2><br>
+<table class="table table-striped">
+<thead>
+    <tr>
+          <th>turf Name</th>
+           <th>City</th>
+          <th>TurfType</th>
+          <th>TurfAddress</th>
+          <th>Manager Name</th>
+          <th> Actions</th>
+    </tr>
+</thead>
+<tbody>
+<tr *ngFor = "let turf of turflist">
+
+<td>{{turf.turfName}}</td>
+<td>{{turf.turfAdd}}</td>
+<td>{{turf.turfType}}</td>
+<td>{{turf.turfFullAdd}}</td>
+<td>{{turf.managerName}}</td>
+<td>
+    <button  class=" btn btn-info" (click)=onSubmitBooking()>Book</button>
+</td>
+</tr>
+
+</tbody>
+
+
+
+
+
+
+  <!--Container-->

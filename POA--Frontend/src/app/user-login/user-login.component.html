@@ -1,0 +1,96 @@
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5">
+                    <div class="row"> 
+                        <img src="https://images-platform.99static.com//QPpY0ziz0_g8stmL2n4wvIDE0HE=/0x0:1500x1500/fit-in/500x500/99designs-contests-attachments/79/79888/attachment_79888445" class="logo">
+                 </div>
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> 
+                        <img src="https://www.silicon.co.uk/wp-content/uploads/2015/12/sports-684x500.jpg" class="image"> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card2 card border-0 px-4 py-5">
+                    <form (ngSubmit)="onSubmit()">
+                        <h3 class="mb-0 text-lg font-weight-bold text-center">Sign In</h3>
+                        <small class="text-danger">{{msg}}</small>
+                        <div class="form-group">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm font-weight-bold">UserName</h6>
+                            </label> 
+                            <input type="text" [(ngModel)]="user.emailId" [ngModelOptions]="{standalone: true}" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-z]{2,3}$" #emailId="ngModel" [class.is-invalid]="emailId.invalid && emailId.touched" class="form-control" id="emailId" placeholder="EmailId">
+
+                            <small class="text-danger" [class.d-none]="emailId.valid || emailId.untouched">EmailId is required</small>
+                        </div>
+
+                        
+                        <div class="form-group">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm font-weight-bold">Password</h6>
+                            </label> 
+                            <input type="password" [(ngModel)]="user.password" [ngModelOptions]="{standalone: true}" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control" id="pwd" placeholder="Password">
+
+                            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+                        </div>
+
+
+                        <div class="row px-3 mb-4">
+                            <div class="custom-control custom-checkbox custom-control-inline"> 
+                              <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> 
+                            
+                            </div> 
+                            <a href="forgot-password" class="ml-auto mb-0 text-sm font-weight-bold">Forgot Password?</a>
+                        </div>
+
+
+                    <div class="row mb-3 px-3 align-items-center ">
+                         <button type="submit" class="btn btn-blue align">Login</button> 
+                    </div>
+                    <div class="row mb-4 px-3"> 
+                        <small class="font-weight-bold">Don't have an account? <a href="user-register" class="text-danger ">Register</a></small>
+                        
+                        <h4><span class="ml-auto text-white"><a href="#" class="forgot-pass">Forgot Password....?</a></span> </h4>
+                    </div>
+
+                    <div class="row px-3 mb-4">
+                        <div class="line"></div> <small class="or text-center">Or</small>
+                        <div class="line"></div>
+                    </div>
+
+                    <div class="row mb-4 px-3 align-items-center ">
+                         <h6 class="mb-0 mr-4 mt-2 text-center font-weight-bold">Sign in with</h6><br>
+                        <div class="facebook text-center  mr-3">
+                            <div class="fa fa-facebook"></div>
+                        </div>
+                        <div class="twitter text-center mr-3">
+                            <div class="fa fa-twitter"></div>
+                        </div>
+                        <div class="linkedin text-center mr-3">
+                            <div class="fa fa-linkedin"></div>
+                        </div>
+
+             
+                    </div>
+                </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="bg-blue py-4">
+            <div class="row px-3">
+                 <small class="ml-4 ml-sm-5 mb-2 text-md-left">Copyright &copy; 2021. All rights reserved.</small>
+               
+            </div>
+        </div>
+    </div>
+</div>

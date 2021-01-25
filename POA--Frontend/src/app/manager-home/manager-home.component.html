@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark black" [containerInside]="false">
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand><a class="navbar-brand font-weight-bold " href="#">Play On Arena</a></mdb-navbar-brand>
+  
+    <!-- Collapsible content -->
+    <links>
+  
+      <!-- Links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a href="home" class="nav-link waves-light" mdbWavesEffect>Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about-us" class="nav-link waves-light" mdbWavesEffect>About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href ="contact-us" class="nav-link waves-light" mdbWavesEffect>Contact Us</a>
+        </li>
+        <li class="nav-item">
+            <a href ="services" class="nav-link waves-light" mdbWavesEffect>Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a href ="membership" class="nav-link waves-light" mdbWavesEffect>Membership</a>
+          </li>
+        <!-- Dropdown -->
+   
+  </ul>
+
+        <!-- Log out model -->
+
+        <ul class="navbar-nav ml-auto nav-flex-icons ">
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="twitter"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <mdb-icon fab icon="google-plus"></mdb-icon>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <div class="btn-group" mdbDropdown>
+                  <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+                  <div class="dropdown-menu dropdown-menu-right dropdown-primary ">
+                    <a class="dropdown-item" (click)="onSubmit()">Log Out</a>
+                  
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- Logout model-->
+     
+    </links>
+  
+  </mdb-navbar>
+  <!--/.Navbar-->
+<body>
+    <div class="row mt-4">
+        
+    </div>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="card text-light mb-3" style="background: #050402">
+                    <div class="card-header text-dark" style="background: #e2dadabd ">
+                        <h3 style="text-align: center; margin: 20px;">Add your turf</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- <div class="col-md-6">
+                                <div class="form-group ">
+                                    <label for="">TurfId</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div> -->
+
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label for="">Name</label>
+                                    <input type="hidden"  class="form-control">
+                                </div>
+                            </div>         
+
+                            <div class="col-md-12">
+                                <div class="form-group ">
+                                    <label for="">Name</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="">City</label>
+                                <textarea rows="1" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+
+
+
+                        </div>
+
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Turf Type</label>
+                                    <select  class="form-control" >
+                                <option value="cricket">cricket</option>
+                                <option value="basketball">basketball</option>
+                                <option value="other">Other</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Turf Pic</label>
+                                    <input type="image" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-md-7">
+                            <button class="btn btn-success" style="margin-left: 20px;">Add</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-1"></div>
+
+        </div>
+        <br>
+
+    </div>
+</body>
+
+</html>

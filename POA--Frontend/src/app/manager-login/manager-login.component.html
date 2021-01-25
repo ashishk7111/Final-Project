@@ -1,0 +1,50 @@
+<div class="container px-4 py-5 mx-auto">
+    <div class="card card0">
+        <div class="d-flex flex-lg-row flex-column-reverse">
+            <div class="card card1">
+                <div class="row"> 
+                    <img src="https://images-platform.99static.com//QPpY0ziz0_g8stmL2n4wvIDE0HE=/0x0:1500x1500/fit-in/500x500/99designs-contests-attachments/79/79888/attachment_79888445" class="logo">
+             </div>
+             
+                <div class="row justify-content-center my-auto">
+                    <form (ngSubmit)= " onSubmit()">
+                    <div class="col-lg-8 my-5">
+                        <h3 class="mb-3 font-weight-bold">SignIn Manager</h3> 
+
+                        <small class="text-danger">{{msg}}</small> 
+                        <div class="form-group mt-5"> 
+
+                            <input type="text"  [(ngModel)]="manager.emailId"  [ngModelOptions]="{standalone: true}" id="name" class="form-control" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-z]{2,3}$" #emailId="ngModel" [class.is-invalid]="emailId.invalid && emailId.touched">
+                             <label class="form-control-placeholder" for="emailId">EmailId</label> 
+                            
+                             <small class="text-danger" [class.d-none]="emailId.valid || emailId.untouched">EmailId is required</small>
+                        </div>
+
+                        <div class="form-group mt-4"> 
+                            <input type="password" [(ngModel)]="manager.password"  [ngModelOptions]="{standalone: true}" id="mail"  class="form-control" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched"> 
+                            <label class="form-control-placeholder" for="password">Password</label>
+                            
+                            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+                        </div>
+
+                        <div class="row justify-content-center my-3"> 
+                            <button class="btn btn-gray font-weight-bold">Sign In</button>
+                        </div>
+
+                      
+
+                        <div class="row justify-content-center my-2 font-weight-bold">
+                             
+                        </div>
+                    </div>
+                </form>
+                </div>
+            
+                <div class="bottom text-center mb-3"> 
+                    <a href="manager-register" class="sm-text mx-auto mb-3 font-weight-bold">Don't have an account?</a>
+                 </div>
+            </div>
+            <div class="card card2"> <img id="image" src="https://pngimg.com/uploads/football_player/football_player_PNG66.png"> </div>
+        </div>
+    </div>
+</div>

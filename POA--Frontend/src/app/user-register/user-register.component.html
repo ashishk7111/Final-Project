@@ -1,0 +1,95 @@
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5 ">
+                    <div class="row"> 
+                        <img src="https://images-platform.99static.com//QPpY0ziz0_g8stmL2n4wvIDE0HE=/0x0:1500x1500/fit-in/500x500/99designs-contests-attachments/79/79888/attachment_79888445" class="logo">
+                   </div>
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> 
+                        <img src="https://cdn.images.express.co.uk/img/dynamic/4/590x/Sports-quiz-questions-answers-1280284.jpg?r=1592058108688" class="image"> 
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-lg-6">
+                <div class="card2 card border-0 px-4 py-5">
+                    <form (ngSubmit)= " onSubmit()">
+                      <h3 class="mb-0 text-lg font-weight-bold text-center">SignUp User</h3><br><br>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">UserName</h6>
+                        </label> 
+                        <input type="text" required #userName="ngModel" [(ngModel)]="user.userName"  [ngModelOptions]="{standalone: true}"  [class.is-invalid]="userName.invalid && userName.touched" class="form-control"  id="userName" placeholder="UserName">
+
+                        <small class="text-danger" [class.d-none]="userName.valid || userName.untouched">UserName is required</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">FirstName</h6>
+                        </label> 
+                      <input type="text" required #firstName="ngModel" [(ngModel)]="user.firstName"  [ngModelOptions]="{standalone: true}" [class.is-invalid]="firstName.invalid && firstName.touched" class="form-control"  id="firstName" placeholder="FirstName">
+
+                      <small class="text-danger" [class.d-none]="firstName.valid || firstName.untouched">FirstName is required</small>
+
+                     </div>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">LastName</h6>
+                        </label> 
+                
+                      <input type="text" required #lastName="ngModel" [(ngModel)]="user.lastName"  [ngModelOptions]="{standalone: true}" [class.is-invalid]="lastName.invalid && lastName.touched" class="form-control"  id="lastName" placeholder="LastName">
+
+                      <small class="text-danger" [class.d-none]="lastName.valid || lastName.untouched">LastName is required</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">ContactNo</h6>
+                        </label> 
+                      <input type="text" required #mobNo="ngModel" [(ngModel)]="user.mobNo"  [ngModelOptions]="{standalone: true}" minlength="10" maxlength="10" [class.is-invalid]="mobNo.invalid && mobNo.touched" class="form-control"  id="mobNo" placeholder="Contact No">
+
+                      <small class="text-danger" [class.d-none]="mobNo.valid || mobNo.untouched">Contact No. is required 10 digit</small>
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">EmailId</h6>
+                        </label> 
+                      <input type="text" required #emailId="ngModel" [(ngModel)]="user.emailId"  [ngModelOptions]="{standalone: true}" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-z]{2,3}$" [class.is-invalid]="emailId.invalid && emailId.touched"  class="form-control"  id="email" placeholder="EmailId">
+
+                      <small class="text-danger" [class.d-none]="emailId.valid || emailId.untouched">EmailId is required</small>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">
+                            <h6 class="mb-0 text-sm font-weight-bold">Password</h6>
+                        </label> 
+                        <input type="text" required #password="ngModel" [(ngModel)]="user.password"  [ngModelOptions]="{standalone: true}" [class.is-invalid]="password.invalid && password.touched" class="form-control"  id="pwd" placeholder="Password">
+
+                        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>
+
+                    </div><br><br>
+                    
+                   <div class="row mb-3 px-3 align-items-center ">
+                    <button type="submit" class="btn btn-blue align">Register</button> 
+                  </div>
+                </form>
+                
+                </div>
+            </div>
+
+        </div>
+
+        
+        <div class="bg-blue py-4">
+            <div class="row px-3">
+                 <small class="ml-4 ml-sm-5 mb-2 text-md-left">Copyright &copy; 2021. All rights reserved.</small>
+            </div>
+        </div>
+    </div>
+</div>
